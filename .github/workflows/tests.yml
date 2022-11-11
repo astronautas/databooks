@@ -17,7 +17,7 @@ jobs:
         run: |
           pip install poetry==1.1.7
           poetry config virtualenvs.create false
-          poetry install --no-interaction --no-ansi
+          poetry install --no-interaction --no-ansi --all-extras
       - name: QA with flake8, black, isort and mypy
         run: |
           pre-commit run --all-files
